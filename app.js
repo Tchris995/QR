@@ -25,20 +25,30 @@ downloadBtn.style.display = 'none';
 
 generateBtn.addEventListener('click',(e)=>{
     e.preventDefault();
-    const qrCodeValue = input.value.trim();
+    let qrCodeValue = input.value.trim();
     if(!qrCodeValue){
         alert('Please enter a valid URL or text');
         return;
     }
 
+        if(!qrCodeValue.startsWith("http://") && !qrCodeValue.startsWith("https://")){
+            qrCodeValue = "https://" + qrCodeValue;
+        }
 
-    try {
-        new URL(qrCodeValue);
-    } catch (error) {
+    // try {
+    //     new URL(qrCodeValue);
+    // } catch (error) {
+    //     input.value = '';
+    //     alert('Please enter a valid link e.g. https://chrisworks.lovestoblog.com/   your friend chrisboss')
+    //     return;
+    // }
+    const urlPattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/.*)?$/;
+    if (!urlPattern.test(qrCodeValue)) {
         input.value = '';
-        alert('Please enter a valid link e.g. https://chrisworks.lovestoblog.com/   your friend chrisboss')
+        alert('Please enter a valid link e.g. https://chrisworks.lovestoblog.com/');
         return;
     }
+
     qrCodeContainer.innerHTML = '';
 
     let size = window.innerWidth < 466 ? 150 : 200;
