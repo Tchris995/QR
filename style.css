@@ -27,7 +27,7 @@ body{
 
 }
 
-.foam{
+/* .foam{
     width: 50vw;
     padding: 1rem;
     border: none;
@@ -35,8 +35,20 @@ body{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    }
+    } */
 
+.foam {
+    width: 100%;                /* Take full column width */
+    max-width: 500px;           /* Don’t get too wide on desktop */
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: block;
+           /* Center on larger screens */
+}
 
 
 
@@ -46,6 +58,7 @@ body{
 
     @media (max-width: 576px) {
   .badge {
+
     font-size: 2rem;
     padding: 0.5rem;
   }
@@ -78,4 +91,3 @@ body{
     font-size: 1rem;
     padding: 0.5rem;
   }
-}
