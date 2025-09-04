@@ -1,0 +1,81 @@
+body{
+    background-color: #FF2DD1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge{
+    d: inline-block;
+    text-align: left;
+    font-size: 2.5rem;
+    background-color: #00FFDE;
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease;
+
+}
+
+.foam{
+    width: 50vw;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    }
+
+
+
+
+
+
+
+
+    @media (max-width: 576px) {
+  .badge {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  .foam::placeholder {
+    font-size: 0.9rem;   /* Adjust to your liking */
+
+}
+}
+
+ @media (min-width: 576px) and (max-width: 768px) {
+
+  .foam::placeholder {
+    font-size: 1.2rem;   /* Adjust to your liking */
+
+}
+}
+
+
+ @media (max-width: 320px) {
+    .foam{
+        font-size: 3 rem;
+    }
+
+  /* .foam::placeholder {
+    font-size: 0.5rem;   Adjust to your liking */
+
+}
+
+.badge {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
